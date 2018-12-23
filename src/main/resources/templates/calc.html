@@ -9,6 +9,10 @@
 <form method="post" th:action="@{/calculate}" th:object="${inputs}">
     <label>#number 1</label>
     <input type=number th:field="*{numb1}"/>
+    <label>operation 1</label>
+    <input type=text th:field="*{op1}"/>
+    <label>#number 2</label>
+    <input type=number th:field="*{numb2}"/>
     <button type=submit>Submit</button>
 </form>
 </body>

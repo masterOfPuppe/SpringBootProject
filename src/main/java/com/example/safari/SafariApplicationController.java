@@ -2,6 +2,7 @@ package com.example.safari;
 
 import businnessLogic.Inputs;
 import businnessLogic.Result;
+import com.example.safari.calc.Calc;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +27,8 @@ public class SafariApplicationController {
     // This method is called after press button in /calculate web-page
     @PostMapping("/calculate")
     public String calculateSubmit(@ModelAttribute Inputs input, Model model){
-        Result res = new Result(input.getNumb1() * 5);
+        Result res = new Result(new Calc().execute(input));
+
         model.addAttribute("result", res);
         return "result.html";
     }
