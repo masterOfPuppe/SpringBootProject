@@ -4,11 +4,11 @@
     <meta charset="utf-8"/>
 </head>
 <body>
-<p th:text="'Home '+${name}"/>
+<h1>Multiply for 5</h1>
 
-<form method="post" th:action="@{/greeting}" th:object="${greeting}">
-    <label>message</label>
-    <input type=text th:field="*{message}"/>
+<form method="post" th:action="@{/calculate}" th:object="${inputs}">
+    <label>#number 1</label>
+    <input type=number th:field="*{numb1}"/>
     <button type=submit>Submit</button>
 </form>
 </body>
