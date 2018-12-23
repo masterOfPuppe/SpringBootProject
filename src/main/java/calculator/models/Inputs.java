@@ -1,4 +1,4 @@
-package businnessLogic;
+package calculator.models;
 
 public class Inputs {
 

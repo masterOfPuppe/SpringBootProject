@@ -1,8 +1,8 @@
-package com.example.safari;
+package calculator.safari;
 
-import businnessLogic.Inputs;
-import businnessLogic.Result;
-import com.example.safari.calc.Calc;
+import calculator.models.Inputs;
+import calculator.models.Result;
+import calculator.safari.calc.Calc;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

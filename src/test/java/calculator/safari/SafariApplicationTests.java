@@ -1,4 +1,4 @@
-package com.example.safari;
+package calculator.safari;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

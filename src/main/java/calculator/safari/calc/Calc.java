@@ -1,6 +1,6 @@
-package com.example.safari.calc;
+package calculator.safari.calc;
 
-import businnessLogic.Inputs;
+import calculator.models.Inputs;
 
 public class Calc {
 
