@@ -1,13 +1,14 @@
 package bookStore.models;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 
-/* To say that this is a resources for H2 database,
-   you should use Entity. Each entity should be have
-   an @Id property. */
+/* To say that this is a resources you should use Entity.
+   Each entity should be have an @Id property.
+   If you use @Generated for @Id, the system every time
+   will generate a new Id.*/
+
 @Entity
 public class Book implements Serializable {
 
@@ -47,7 +48,6 @@ public class Book implements Serializable {
     }
 
     @Id
-    @GeneratedValue
     private long id;
     private String title;
     private String author;

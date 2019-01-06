@@ -34,6 +34,8 @@ public class EBSRestController {
         bookRepository.deleteById(id);
     }
 
+    /* To use this method, bif the body is written in JSon,
+    *  you should specify it in Header request like Content-Type = application/json.*/
     @PostMapping(value = "/rest/books")
     public ResponseEntity<Object> newBook(@RequestBody Book newBook){
         Book newOne = bookRepository.save(newBook);
