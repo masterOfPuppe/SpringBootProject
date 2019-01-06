@@ -11,6 +11,8 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
+/* With @Autowired property, the system will implement
+   by itself a new instance for interface BookRepository  */
 @RestController
 public class EBSRestController {
 
@@ -33,8 +35,8 @@ public class EBSRestController {
     }
 
     @PostMapping(value = "/rest/books")
-    public ResponseEntity<Object> newBook(@RequestBody Book book){
-        Book newOne = bookRepository.save(book);
+    public ResponseEntity<Object> newBook(@RequestBody Book newBook){
+        Book newOne = bookRepository.save(newBook);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(newOne.getId()).toUri();
 

@@ -5,6 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 
+/* To say that this is a resources for H2 database,
+   you should use Entity. Each entity should be have
+   an @Id property. */
 @Entity
 public class Book implements Serializable {
 
